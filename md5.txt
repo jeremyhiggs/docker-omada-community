@@ -1,1 +1,2 @@
 fe1cb473951303d9cfc606613fdad870  omada-controller_3.2.4-1_all.deb
+501339a240409d3040717f07a5a69274  omada-controller_3.2.6-1_all.deb
