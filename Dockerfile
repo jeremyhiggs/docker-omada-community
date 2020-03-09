@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+HEALTHCHECK --start-period=15m CMD wget --quiet --tries=1 --no-check-certificate http://127.0.0.1:8088 || exit 1
+
 # Install java
 RUN apt-get update && \
     apt-get install -y openjdk-8-jdk
@@ -10,7 +12,7 @@ RUN apt-get update && \
 
 # Install dependencies for Omada Controller
 RUN apt-get update && \
-    apt-get install -y net-tools wget jsvc curl
+    apt-get install -y net-tools wget jsvc curl libcap2-bin libcap2
 
 # Install Omada Controller 3.2.6
 # Thanks to the Omada community 
